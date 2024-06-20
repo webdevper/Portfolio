@@ -362,6 +362,11 @@ nav .fa {
 
 }
 
+@media (max-width: 750px){
+    .footer p {
+        font-size: 10px;
+    }
+}
 
 
 /* --------------Projects------------- */
