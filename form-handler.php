@@ -1,50 +1,32 @@
 <?php
-session_start();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect and sanitize form data
+    $name = htmlspecialchars(strip_tags(trim($_POST['name'])));
+    $email = htmlspecialchars(strip_tags(trim($_POST['email'])));
+    $subject = htmlspecialchars(strip_tags(trim($_POST['subject'])));
+    $message = htmlspecialchars(strip_tags(trim($_POST['message'])));
 
-function sanitize_input($data) {
-    return htmlspecialchars(stripslashes(trim($data)));
-}
+    // Email settings
+    $to = "webdevper.info@gmail.com";  // Replace with your email address
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
-function generate_csrf_token() {
-    return bin2hex(random_bytes(32));
-}
+    // Construct email content
+    $email_subject = "New Contact Form Submission: $subject";
+    $email_body = "You have received a new message from the contact form on your website.\n\n";
+    $email_body .= "Name: $name\n";
+    $email_body .= "Email: $email\n";
+    $email_body .= "Subject: $subject\n";
+    $email_body .= "Message:\n$message\n";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-        die("Invalid CSRF token");
-    }
-
-    $name = sanitize_input($_POST['name']);
-    $visitor_email = sanitize_input($_POST['email']);
-    $subject = sanitize_input($_POST['subject']);
-    $message = sanitize_input($_POST['message']);
-
-    if (empty($name) || empty($subject) || empty($message)) {
-        die("Name, subject, and message are required.");
-    }
-
-    if (!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
-        die("Invalid email format");
-    }
-
-    $email_from = 'webdevper.info@gmail.com';
-    $email_subject = 'New Form Submission';
-    $email_body = "User Name: $name.\n".
-                  "User Email: $visitor_email.\n".
-                  "Subject: $subject.\n".
-                  "User Message: $message.\n";
-
-    $to = 'mohanjaiswal2000@gmail.com';  
-
-    $headers = "From: $email_from \r\n";
-    $headers .= "Reply-To: $visitor_email \r\n";
-
+    // Send the email
     if (mail($to, $email_subject, $email_body, $headers)) {
-        header("Location: contact.html");
+        echo "Message sent successfully!";
     } else {
-        echo "Email sending failed.";
+        echo "Failed to send message.";
     }
 } else {
-    $_SESSION['csrf_token'] = generate_csrf_token();
+    echo "Invalid request method.";
 }
 ?>
