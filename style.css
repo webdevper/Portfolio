@@ -456,8 +456,22 @@ nav .fa {
 
 .projects .project-link {
     margin: 10px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.plist:nth-of-type(2n+1) .project-link{
+    flex-direction: row;
 }
 
+ .project-link .pview{
+    text-decoration: none;
+    color: #64ffda;
+    /* border: 2px solid red; */
+    margin: 0 20px;
+    font-family: "Space Mono", monospace;
+
+ }
 
 .github-icon svg {
     filter: saturate(0.1) brightness(0.4);
@@ -646,6 +660,9 @@ nav .fa {
         display: flex;
         justify-content: end;
     }
+   .projects .project-link{
+    flex-direction: row;
+}
 
 }
 
