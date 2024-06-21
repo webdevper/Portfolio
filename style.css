@@ -344,13 +344,10 @@ nav .fa {
 
 }
 
-.icons svg {
+.footer .icons svg {
     margin: 18px auto;
-
     filter: saturate(0.1) brightness(0.4);
-    transition: 1s ease;
-
-
+    transition: 1s ease-in-out;
 }
 
 
@@ -365,6 +362,11 @@ nav .fa {
 
 }
 
+@media (max-width: 750px){
+    .footer p {
+        font-size: 10px;
+    }
+}
 
 
 /* --------------Projects------------- */
@@ -469,6 +471,7 @@ nav .fa {
 
 }
 
+
 .project-cont .project-decs {
     background: #112240;
     padding: 30px;
@@ -508,7 +511,10 @@ nav .fa {
     filter: blur(0) brightness(1);
     box-shadow: 0 0px 27px -5px #64ffda;
 }
+.Project-list:hover .logginimg img{
+    box-shadow: 0 0px 27px -5px #ee04ff;
 
+}
 /* .plist:nth-of-type(2n+1) .project-cont .project-decs{
   width: 100%;
 } */
