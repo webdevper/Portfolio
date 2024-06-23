@@ -219,24 +219,25 @@ nav .fa {
 
 }
 
-.home-page h2 {
+.home-page  .name-eft span{
     font-size: 3rem;
     font-weight: 600;
     color: #ccd6f6;
     line-height: 1.1;
-}
+ }
+
 
 .home-page h3 {
     font-size: 3rem;
     color: #8892b0;
 }
 
-.home-page span {
+.home-page p  span {
     color: #64ffda;
     transition: 1s ease;
 }
 
-.home-page span:hover {
+.home-page p span:hover {
     color: #fff;
     text-shadow: 0 0 1px #64ffda, 0 0 0px #64ffda, 0 0 4px #64ffda, 0 0 0px #64ffda, 0 0 0px #64ffda, 0 0 15px #64ffda, 0 0 0px #64ffda;
 }
@@ -268,7 +269,7 @@ nav .fa {
         width: 100%;
     }
 
-    .home-box h2,
+    .home-box .name-eft span,
     .home-box h3 {
         font-size: 2rem;
     }
