@@ -734,13 +734,6 @@ nav .fa {
     display: block;
 }
 
-.cont-dtl img {
-
-    width: 100%;
-    height: 100%;
-
-}
-
 .contact input,
 .contact textarea {
     width: 100%;
@@ -793,10 +786,6 @@ nav .fa {
     border-radius: 5px;
     border: 1px solid #53D3B9;
 }
-
-
-
-
 
 @media (max-width: 750px) {
 
