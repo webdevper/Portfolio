@@ -219,12 +219,12 @@ nav .fa {
 
 }
 
-.home-page  .name-eft span{
+.home-page .name-eft span {
     font-size: 3rem;
     font-weight: 600;
     color: #ccd6f6;
     line-height: 1.1;
- }
+}
 
 
 .home-page h3 {
@@ -232,7 +232,7 @@ nav .fa {
     color: #8892b0;
 }
 
-.home-page p  span {
+.home-page p span {
     color: #64ffda;
     transition: 1s ease;
 }
@@ -300,23 +300,26 @@ nav .fa {
 }
 
 
-.home-box h1{
+.home-box h1 {
     animation-delay: 1.2s;
 }
-.home-box h2{
+
+.home-box h2 {
     animation-delay: 1.4s;
 }
-.home-box h3{
+
+.home-box h3 {
     animation-delay: 1.6s;
 }
-.home-box p{
+
+.home-box p {
     animation-delay: 1.8s;
 }
 
 
 
 
-.home-box img{
+.home-box img {
     transform: translatex(-100px);
     filter: blur(20px);
     opacity: 0;
@@ -332,7 +335,7 @@ nav .fa {
     }
 }
 
-.home-box img{
+.home-box img {
     animation-delay: 2s;
 }
 
@@ -379,9 +382,10 @@ nav .fa {
     box-shadow: 8px 9px 29px -8px #c2c2ff;
 }
 
-.abt-img img:hover{
+.abt-img img:hover {
     box-shadow: 8px 9px 29px -8px#00fff7;
 }
+
 @media (max-width: 750px) {
 
 
@@ -491,18 +495,19 @@ nav .fa {
     align-items: center;
     flex-direction: row-reverse;
 }
-.plist:nth-of-type(2n+1) .project-link{
+
+.plist:nth-of-type(2n+1) .project-link {
     flex-direction: row;
 }
 
- .project-link .pview{
+.project-link .pview {
     text-decoration: none;
     color: #64ffda;
     /* border: 2px solid red; */
     margin: 0 20px;
     font-family: "Space Mono", monospace;
 
- }
+}
 
 .github-icon svg {
     filter: saturate(0.1) brightness(0.4);
@@ -555,10 +560,12 @@ nav .fa {
     filter: blur(0) brightness(1);
     box-shadow: 0 0px 27px -5px #64ffda;
 }
-.Project-list:hover .logginimg img{
+
+.Project-list:hover .logginimg img {
     box-shadow: 0 0px 27px -5px #ee04ff;
 
 }
+
 /* .plist:nth-of-type(2n+1) .project-cont .project-decs{
   width: 100%;
 } */
@@ -690,9 +697,10 @@ nav .fa {
         display: flex;
         justify-content: end;
     }
-   .projects .project-link{
-    flex-direction: row;
-}
+
+    .projects .project-link {
+        flex-direction: row;
+    }
 
 }
 
@@ -914,7 +922,7 @@ nav .fa {
     transition: all 1s ease-in-out;
 }
 
-.footer .icons  svg:hover {
+.footer .icons svg:hover {
 
     opacity: 1;
     filter: drop-shadow(0px 0px 10px #64ffda) brightness(1);
@@ -922,7 +930,7 @@ nav .fa {
 
 }
 
-@media (max-width: 750px){
+@media (max-width: 750px) {
     .footer p {
         font-size: 10px;
     }
