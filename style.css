@@ -278,6 +278,63 @@ nav .fa {
 }
 
 
+/* -----------Animation Home page----------------- */
+
+.home-box h1,
+.home-box h2,
+.home-box h3,
+.home-box p,
+.home-box {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+
+.home-box h1{
+    animation-delay: 1.2s;
+}
+.home-box h2{
+    animation-delay: 1.4s;
+}
+.home-box h3{
+    animation-delay: 1.6s;
+}
+.home-box p{
+    animation-delay: 1.8s;
+}
+
+
+
+
+.home-box img{
+    transform: translatex(-100px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showImg 1s 1s linear 1 forwards;
+}
+
+@keyframes showImg {
+    to {
+        opacity: 0.5;
+
+        filter: blur(0);
+        transform: translatex(0);
+    }
+}
+
+.home-box img{
+    animation-delay: 2s;
+}
 
 /* --------------About------------ */
 /* some css property marge with contact css   */
@@ -835,6 +892,8 @@ nav .fa {
     color: #ccd6f6;
     font-size: 13px;
     opacity: 0.5;
+    transition: 0.3s ease-in-out;
+
 }
 
 .footer-nav ul a:hover {
@@ -847,19 +906,15 @@ nav .fa {
     display: flex;
     justify-content: space-between;
     /* border: 2px solid black; */
-    
-    transition: 1s ease-in-out;
-
 }
 
 .footer .icons svg {
     margin: 18px auto;
     filter: saturate(0.1) brightness(0.4);
-    transition: 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
-
-.icons svg:hover {
+.footer .icons  svg:hover {
 
     opacity: 1;
     filter: drop-shadow(0px 0px 10px #64ffda) brightness(1);
@@ -872,4 +927,6 @@ nav .fa {
         font-size: 10px;
     }
 }
+
+
 
