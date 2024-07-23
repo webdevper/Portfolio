@@ -573,6 +573,7 @@ nav .fa {
     filter: blur(1px) brightness(0.6);
 }
 
+
 .Project-list:hover .project-img img {
     filter: blur(0) brightness(1);
     box-shadow: 0 0px 27px -5px #64ffda;
