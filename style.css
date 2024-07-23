@@ -370,21 +370,38 @@ nav .fa {
     /* border: 2px solid #00fff7; */
 }
 
+.hide-img {
+    overflow: hidden;
+    border: 2px solid #00fff7;
+    border-radius: 5px;
+    box-shadow: 8px 9px 29px -8px #c2c2ff;
+    transition: transform 1s ease-in-out;
 
+}
+
+.abt-img {
+    max-height: 280px;
+    max-width: 300px;
+
+}
 
 .abt-img img {
     max-height: 280px;
-    border-radius: 5px;
     max-width: 300px;
     filter: brightness(0.8);
-    border: 2px solid #00fff7;
+    /* border: 2px solid #00fff7; */
+    transition: transform 0.3s ease-in-out;
 
-    box-shadow: 8px 9px 29px -8px #c2c2ff;
 }
 
 .abt-img img:hover {
-    box-shadow: 8px 9px 29px -8px#00fff7;
+    transform: scale(1.2) rotate(10deg);
 }
+.about .hide-img:hover{
+    box-shadow: 8px 9px 29px -8px #00fff7;
+  
+}
+
 
 @media (max-width: 750px) {
 
@@ -935,6 +952,3 @@ nav .fa {
         font-size: 10px;
     }
 }
-
-
-
