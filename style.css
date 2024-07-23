@@ -567,7 +567,6 @@ nav .fa {
 .project-img img {
     width: 100%;
     transition: 0.5s ease;
-
     /* border: 2px solid red; */
 
     filter: blur(1px) brightness(0.6);
@@ -695,7 +694,6 @@ nav .fa {
 
     .plist:nth-of-type(2n+1) .project-img {
         height: 100%;
-        opacity: 0.45;
         grid-column: 1 / -1;
     }
 
