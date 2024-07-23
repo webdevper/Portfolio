@@ -671,7 +671,6 @@ nav .fa {
 
     .project-img {
         height: 100%;
-        opacity: 0.45;
         grid-column: 1 / -1;
     }
 
