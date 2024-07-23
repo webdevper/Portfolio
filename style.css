@@ -1,5 +1,15 @@
-/* Global styles */
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root {
+    --primary-color: #005FCC;
+    --secondary-color: #64ffda;
+    --background-color: #0A192F;
+    --text-color: #8892b0;
+    --text-color-2: #ccd6f6;
+    --scrollbar-color:#495670 #0a192f;
+}
 
 * {
     margin: 0;
@@ -12,9 +22,9 @@ html,
 body {
     overflow-x: hidden;
     /* Prevent horizontal scroll */
-    background: #0A192F;
+    background: var(--background-color);
     scrollbar-width: thin;
-    scrollbar-color: #495670 #0a192f;
+    scrollbar-color: var(--scrollbar-color);
     scroll-behavior: smooth;
 }
 
@@ -23,7 +33,6 @@ body {
 .header {
     min-height: 100vh;
     width: 100%;
-    background: #0A192F;
     position: relative;
 }
 
@@ -55,7 +64,7 @@ nav img {
 }
 
 .nav-links ul li a {
-    color: #ccd6f6;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 13px;
 }
@@ -63,8 +72,8 @@ nav img {
 .nav-links ul li::after {
     content: "";
     width: 0%;
-    height: 2px;
-    background: #53D3B9;
+    height: 1.5px;
+    background: var(--secondary-color);
     display: block;
     margin: auto;
     transition: 0.5s ease-in-out;
@@ -74,19 +83,6 @@ nav img {
     width: 100%;
 }
 
-.text-box {
-    width: 90%;
-    position: absolute;
-    color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.text-box h1 {
-    font-size: 62px;
-}
 
 .hero-btn {
     display: inline-block;
@@ -97,15 +93,14 @@ nav img {
     background: transparent;
     position: relative;
     cursor: pointer;
-    border: 1px solid #53D3B9;
+    border: 1px solid var(--secondary-color);
     transition: 0.3s ease-in-out;
     border-radius: 2px;
 }
 
 .hero-btn:hover {
-    border: 1px solid #53D3B9;
+    border: 1px solid var(--secondary-color);
     background: #07376d;
-
     outline: none;
     box-shadow: 4px 4px 0 0 #53D3B9;
     transform: translate(-5px, -5px);
@@ -178,10 +173,8 @@ nav .fa {
 
 .box-1 {
     z-index: 2;
-    /* Ensure box-1 is on top */
     padding: 60px 140px 0px 10%;
     margin: 20px;
-    /* Adding margin to box-1 */
 }
 
 .box-2 {
@@ -199,14 +192,13 @@ nav .fa {
 
 .home-box h1 {
     margin: 0px 0px 30px 4px;
-    color: #64ffda;
+    color: var(--secondary-color);
     font-size: clamp(5vw);
     font-weight: 400;
     font-family: "Space Mono", monospace;
 }
 
 .home-page .para {
-    /* border: 1px solid red; */
     width: 500px;
     margin: 17px 0;
 
@@ -215,7 +207,7 @@ nav .fa {
 .home-page p {
     text-align: justify;
     font-size: 16px;
-    color: #8892b0;
+    color: var(--text-color);
 
 }
 
@@ -229,7 +221,7 @@ nav .fa {
 
 .home-page h3 {
     font-size: 3rem;
-    color: #8892b0;
+    color: var(--text-color);
 }
 
 .home-page p span {
@@ -239,7 +231,7 @@ nav .fa {
 
 .home-page p span:hover {
     color: #fff;
-    text-shadow: 0 0 1px #64ffda, 0 0 0px #64ffda, 0 0 4px #64ffda, 0 0 0px #64ffda, 0 0 0px #64ffda, 0 0 15px #64ffda, 0 0 0px #64ffda;
+    text-shadow: 0 0 1px var(--secondary-color), 0 0 0px var(--secondary-color), 0 0 4px var(--secondary-color), 0 0 0px #64ffda, 0 0 0px var(--secondary-color), 0 0 15px var(--secondary-color), 0 0 0px var(--secondary-color);
 }
 
 
@@ -348,7 +340,6 @@ nav .fa {
 
 .about-box {
     display: flex;
-    /* border: 4px solid red; */
     flex-basis: auto;
     gap: 50px;
 }
@@ -367,12 +358,11 @@ nav .fa {
     display: flex;
     justify-content: end;
     align-items: baseline;
-    /* border: 2px solid #00fff7; */
 }
 
 .hide-img {
     overflow: hidden;
-    border: 2px solid #00fff7;
+    border: 2px solid var(--secondary-color);
     border-radius: 5px;
     box-shadow: 8px 9px 29px -8px #c2c2ff;
     transition: transform 1s ease-in-out;
@@ -389,7 +379,6 @@ nav .fa {
     max-height: 280px;
     max-width: 300px;
     filter: brightness(0.8);
-    /* border: 2px solid #00fff7; */
     transition: transform 0.3s ease-in-out;
 
 }
@@ -398,7 +387,7 @@ nav .fa {
     transform: scale(1.2) rotate(10deg);
 }
 .about .hide-img:hover{
-    box-shadow: 8px 9px 29px -8px #00fff7;
+    box-shadow: 8px 9px 29px -8px var(--secondary-color);
   
 }
 
@@ -434,15 +423,14 @@ nav .fa {
 .about-header {
     margin: 0px 0px 40px;
     font-weight: 600;
-
-    color: #005FCC;
+    color: var(--primary-color);
     line-height: 1.1;
     font-size: 32px;
 }
 
 .project-header span,
 .about-header span {
-    color: #ccd6f6;
+    color: var(--text-color-2);
     font-size: 22px;
     margin-left: 20px;
 }
@@ -489,21 +477,20 @@ nav .fa {
 
 .projects .project-overline {
     margin: 0px 0px 20px 0px;
-    color: #64ffda;
+    color: var(--secondary-color);
     font-weight: 400;
     font-family: "Space Mono", monospace;
-    /* border: 2px solid rebeccapurple; */
 }
 
 .projects .project-title {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #ccd6f6;
+    color: var(--text-color-2);
 }
 
 .projects .project-title:hover {
-    color: #64ffda;
+    color: var(--text-color-2);
 }
 
 .projects .project-link {
@@ -519,8 +506,7 @@ nav .fa {
 
 .project-link .pview {
     text-decoration: none;
-    color: #64ffda;
-    /* border: 2px solid red; */
+    color: var(--secondary-color);
     margin: 0 20px;
     font-family: "Space Mono", monospace;
 
@@ -541,12 +527,11 @@ nav .fa {
 .project-cont .project-decs {
     background: #112240;
     padding: 30px;
-    color: #8892b0;
+    color: var(--text-color);
     width: 100%;
 }
 
 .project-img {
-    /* box-shadow: 0 10px 30px -15px #020c1bb3; */
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     grid-area: 1 / 6 / -1 / -1;
     position: relative;
@@ -559,23 +544,18 @@ nav .fa {
 
 .project-img div {
     display: block;
-    /* width: 700px; */
-    /* border: 2px solid red; */
-
 }
 
 .project-img img {
     width: 100%;
     transition: 0.5s ease;
-    /* border: 2px solid red; */
-
     filter: blur(1px) brightness(0.6);
 }
 
 
 .Project-list:hover .project-img img {
     filter: blur(0) brightness(1);
-    box-shadow: 0 0px 27px -5px #64ffda;
+    box-shadow: 0 0px 27px -5px var(--secondary-color);
 }
 
 .Project-list:hover .logginimg img {
@@ -737,7 +717,7 @@ nav .fa {
 
 .contact h3 {
 
-    color: #64ffda;
+    color: var(--secondary-color);
     margin-bottom: 20px;
     font-weight: 400;
     font-family: "Space Mono", monospace;
@@ -745,14 +725,14 @@ nav .fa {
 }
 
 .contact h2 {
-    color: #ccd6f6;
+    color: var(--text-color-2);
     font-size: 45px;
     margin: 0px 0px 10px;
     font-weight: 600;
 }
 
 .contact .contact-para {
-    color: #8892b0;
+    color: var(--text-color);
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -765,7 +745,6 @@ nav .fa {
 
 .contact-para p {
     max-width: 600px;
-    /* border: 2px solid red; */
 }
 
 
@@ -786,7 +765,7 @@ nav .fa {
 .cont-hide{
     overflow: hidden;
     border-radius: 5px;
-    border: 1px solid #53D3B9;
+    border: 1px solid var(--secondary-color);
 }
 
 .contact input,
@@ -795,18 +774,17 @@ nav .fa {
     padding: 10px 15px;
     margin-bottom: 17px;
     outline: none;
-    border: 1px solid #53D3B9;
+    border: 1px solid var(--secondary-color);
     box-sizing: border-box;
     border-radius: 5px;
     background: transparent;
-    color: #ccd6f6;
+    color: var(--text-color-2);
     font-family: " monospace", "Poppins";
     font-size: 16px;
 }
 
 ::placeholder {
     color: #999;
-    /* Change the placeholder text color */
     /* font-style: italic;  */
 }
 
@@ -879,8 +857,7 @@ nav .fa {
     width: 100%;
     text-align: center;
     padding: 30px 0;
-
-    color: #ccd6f6;
+    color: var(--text-color-2);
 }
 
 .footer h4 {
@@ -891,7 +868,7 @@ nav .fa {
 
 .footer p {
     padding: 0 38px;
-    color: #64ffda;
+    color: var(--secondary-color);
     font-family: "Space Mono", monospace;
 }
 
@@ -904,13 +881,10 @@ nav .fa {
 .footer-nav ul {
     list-style: none;
     padding: 8px 12px;
-    /* border: 2px solid red; */
-
     width: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 
@@ -920,7 +894,6 @@ nav .fa {
     font-size: 13px;
     opacity: 0.5;
     transition: 0.3s ease-in-out;
-
 }
 
 .footer-nav ul a:hover {
@@ -932,7 +905,6 @@ nav .fa {
     margin: 30px auto;
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid black; */
 }
 
 .footer .icons svg {
@@ -942,11 +914,8 @@ nav .fa {
 }
 
 .footer .icons svg:hover {
-
     opacity: 1;
     filter: drop-shadow(0px 0px 10px #64ffda) brightness(1);
-
-
 }
 
 @media (max-width: 750px) {
