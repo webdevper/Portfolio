@@ -774,10 +774,6 @@ nav .fa {
     display: flex;
     justify-content: space-around;
     gap: 30px;
-
-    /* gap: 30px; */
-
-
 }
 
 .cont-info {
@@ -786,6 +782,12 @@ nav .fa {
 
 .cont-dtl div {
     display: block;
+}
+
+.cont-hide{
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #53D3B9;
 }
 
 .contact input,
@@ -815,10 +817,6 @@ nav .fa {
 }
 
 
-.cont-info .row {
-    display: flex;
-}
-
 .cont-dtl {
     flex: 1;
     display: flex;
@@ -837,8 +835,13 @@ nav .fa {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 5px;
-    border: 1px solid #53D3B9;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.cont-dtl img:hover{
+    transform: scale(1.35) rotate(10deg);
+
 }
 
 @media (max-width: 750px) {
