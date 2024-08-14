@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
@@ -8,7 +7,7 @@
     --background-color: #0A192F;
     --text-color: #8892b0;
     --text-color-2: #ccd6f6;
-    --scrollbar-color:#495670 #0a192f;
+    --scrollbar-color: #495670 #0a192f;
 }
 
 * {
@@ -141,7 +140,7 @@ nav .fa {
         z-index: 6;
     }
 
-   
+
 
     .nav-links ul li a:hover {
         color: #e4e4e4;
@@ -384,9 +383,10 @@ nav .fa {
 .abt-img img:hover {
     transform: scale(1.2) rotate(10deg);
 }
-.about .hide-img:hover{
+
+.about .hide-img:hover {
     box-shadow: 8px 9px 29px -8px var(--secondary-color);
-  
+
 }
 
 
@@ -445,6 +445,20 @@ nav .fa {
     background-color: #233554;
 }
 
+@keyframes leftAnima {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        scale: 1;
+    }
+}
+
 .Project-list {
     position: relative;
     display: grid;
@@ -453,10 +467,10 @@ nav .fa {
     -webkit-box-align: center;
     align-items: center;
     margin: 100px 0;
-}
-
-.project-list .plist {
-    transition: display 0.3s ease;
+    animation: leftAnima 0.5s ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    transition: display 0.3s ease-in-out;
 }
 
 
@@ -560,10 +574,6 @@ nav .fa {
     box-shadow: 0 0px 27px -5px #ee04ff;
 
 }
-
-/* .plist:nth-of-type(2n+1) .project-cont .project-decs{
-  width: 100%;
-} */
 
 .more-project {
     display: flex;
@@ -697,19 +707,34 @@ nav .fa {
 
 }
 
-
 /* -------------contact---------- */
 
 .contact {
     margin: 100px 10%;
 
 }
+@keyframes zOut {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
 
 .cont-col {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    animation: zOut;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 .contact h3 {
@@ -759,7 +784,7 @@ nav .fa {
     display: block;
 }
 
-.cont-hide{
+.cont-hide {
     overflow: hidden;
     border-radius: 5px;
     border: 1px solid var(--secondary-color);
@@ -813,7 +838,7 @@ nav .fa {
 
 }
 
-.cont-dtl img:hover{
+.cont-dtl img:hover {
     transform: scale(1.35) rotate(10deg);
 
 }
@@ -921,20 +946,3 @@ nav .fa {
     }
 }
 
-@keyframes jadu {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-
-}
-.cont-col{
-    animation: jadu;
-    animation-timeline: view();
-    animation-range: entry 0 cover 50%; 
-}
