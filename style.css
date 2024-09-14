@@ -578,11 +578,19 @@ nav .fa {
     box-shadow: 0 0px 27px -5px #ee04ff;
 
 }
+.moreContent {
+    display: none; 
+    max-height: 0;
+    transition: all 1s ease-in-out; 
+}
+.more-project a svg {
+    transition: transform 0.3s;
+}
 
 .more-project {
     display: flex;
     justify-content: end;
-    margin-bottom: 30px;
+    margin: 50px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -639,14 +647,14 @@ nav .fa {
     .Project-list:last-child {
         margin-bottom: 0;
     }
-
+  
     .plist:nth-of-type(2n+1) .project-cont {
         grid-column: 1 / -1;
     }
 
     .project-cont {
         grid-column: 1 / -1;
-        margin: 10% 0;
+        /* margin: 10% 0; */
         padding: 0 5%;
     }
 
@@ -667,7 +675,9 @@ nav .fa {
         z-index: 5;
         width: 100%;
     }
-
+    .projects .project-title {
+        font-size: 22px;
+    }
     .plist:nth-of-type(2n+1) .project-cont {
 
         text-align: left;
@@ -694,6 +704,7 @@ nav .fa {
     .project-cont p {
         width: 100%;
         text-align: justify;
+        font-size: 14px;
     }
 
     .project-header::after,
@@ -715,8 +726,10 @@ nav .fa {
 /* -------------contact---------- */
 
 .contact {
-    margin: 100px 10%;
-
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 @keyframes zOut {
     from {
@@ -779,10 +792,6 @@ nav .fa {
     display: flex;
     justify-content: space-around;
     gap: 30px;
-}
-
-.cont-info {
-    margin: 10% 0;
 }
 
 .cont-dtl div {
@@ -851,8 +860,9 @@ nav .fa {
 @media (max-width: 750px) {
 
     .contact {
-        margin: 100px 10%;
+        margin: 50px 10%;
         margin-bottom: 0;
+        gap: 20px;
     }
 
     .contact h2 {
