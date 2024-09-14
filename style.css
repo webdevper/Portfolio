@@ -13,7 +13,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
@@ -537,10 +537,13 @@ nav .fa {
 
 
 .project-cont .project-decs {
-    background: #112240;
+    background: #11224069;
     padding: 30px;
     color: var(--text-color);
     width: 100%;
+    backdrop-filter: blur(17px);
+    border: 0.1px solid #8892b07a;
+    border-radius: 5px;
 }
 
 .project-img {
@@ -562,6 +565,7 @@ nav .fa {
     width: 100%;
     transition: 0.5s ease;
     filter: blur(1px) brightness(0.6);
+    border-radius: 5px;
 }
 
 
@@ -642,7 +646,8 @@ nav .fa {
 
     .project-cont {
         grid-column: 1 / -1;
-        padding: 10%;
+        margin: 10% 0;
+        padding: 0 5%;
     }
 
     .project-header span,
