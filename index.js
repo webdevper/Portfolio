@@ -1,23 +1,37 @@
-var navLinks = document.getElementById("navLinks");
+let navLinks = document.getElementById("navLinks");
 
 function showMenu() {
-    navLinks.style.transform = "translateX(0)"; 
-    navLinks.style.opacity = "1";  // Set opacity to 100%
-    navLinks.style.transition = "transform 0.5s ease, opacity 0.5s ease"; // Add transition for both transform and opacity
+    if (window.innerWidth <= 750) {  // Check if screen width is 750px or less
+        navLinks.style.transform = "translateX(0)";
+        navLinks.style.opacity = "1";
+        navLinks.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+    }
 }
 
 function hideMenu() {
-    navLinks.style.transform = "translateX(100%)"; 
-    navLinks.style.opacity = "0";  // Set opacity to 0%
-    navLinks.style.transition = "transform 0.5s ease, opacity 0.5s ease"; // Add transition for both transform and opacity
+    if (window.innerWidth <= 750) {  // Check if screen width is 750px or less
+        navLinks.style.transform = "translateX(100%)";
+        navLinks.style.opacity = "0";
+        navLinks.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+    }
 }
 
-var menuLinks = document.querySelectorAll('.nav-links ul li a');
+let menuLinks = document.querySelectorAll('.nav-links ul li a');
 menuLinks.forEach(link => {
     link.addEventListener('click', hideMenu);
 });
 
-var typed = new Typed("#element", {
+// Optional: Add event listeners for window resize to handle dynamic screen size changes
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 750) {
+        navLinks.style.transform = "none";  // Reset for larger screens
+        navLinks.style.opacity = "1";       // Ensure the menu is visible on larger screens
+    }
+});
+
+
+// ------------text style----------------
+let typed = new Typed("#element", {
     strings: ["Mohan Jaiswal", "WebDevper"],
     typeSpeed: 150,
     backSpeed: 90,

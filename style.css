@@ -120,6 +120,7 @@ nav .fa {
 
     .nav-links ul li {
         display: block;
+        width: max-content;
     }
 
     .nav-links ul {
