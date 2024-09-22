@@ -64,3 +64,55 @@ document.querySelector('.more-project a').addEventListener('click', function (e)
         }, 1000); // Match the transition duration
     }
 });
+
+
+// --------------Post 
+const express = require('express');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
+
+const app = express();
+const port = 3000;
+
+// Middleware to parse form data
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// Serve static files (HTML, CSS, and client-side JS)
+app.use(express.static('public'));
+
+// Nodemailer configuration
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'your-email@gmail.com', // Replace with your email
+        pass: 'your-email-password',  // Replace with your email password or app password if 2FA enabled
+    },
+});
+
+// Handle form submission (POST request)
+app.post('/send', (req, res) => {
+    const { name, email, subject, message } = req.body;
+
+    const mailOptions = {
+        from: email,
+        to: 'webdevperofficial@gmail.com', // Recipient's email
+        subject: subject,
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            res.send('Error sending email');
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.send('Email successfully sent');
+        }
+    });
+});
+
+// Start server
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
